@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoseRP</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="C:/Users/wikko/Desktop/strona/server-gateways-main/assets/logo.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="C:/Users/wikko/Desktop/strona/server-gateways-main/assets/logo.png" alt="FiveM Logo" class="nav-logo">
+                <span class="nav-title">DoseRP</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#" class="nav-link active" data-page="home">Home</a>
+                <a href="#" class="nav-link" data-page="rules">Regulamin</a>
+                <a href="#" class="nav-link" data-page="changelog">Changelog</a>
+                <a href="#" class="nav-link" data-page="applications">Podania</a>
+                <a href="#" class="nav-link" data-page="status">Sprawdź Status</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Home Page -->
+        <div id="home" class="page active">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1 class="hero-title">DoseRP</h1>
+                    <p class="hero-description">
+                        Najlepszy serwer roleplay w Polsce. Dołącz do naszej społeczności 
+                        i rozpocznij swoją przygodę w Los Santos!
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="window.open('fivem://connect/83.168.69.93', '_blank')">
+                            Dołącz do serwera
+                        </button>
+                        <button class="btn btn-outline" onclick="window.open('https://discord.gg/doserp', '_blank')">
+                            Discord
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="stats">
+                <div class="container">
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-value">N/A</div>
+                            <div class="stat-label">Aktywni gracze</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">N/A</div>
+                            <div class="stat-label">Organizacje</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">N/A</div>
+                            <div class="stat-label">Pojazdy</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">N/A</div>
+                            <div class="stat-label">Prace</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Dlaczego nasz serwer?</h2>
+                        <p>Oferujemy wyjątkowe doświadczenie roleplay z profesjonalną obsługą i aktywną społecznością</p>
+                    </div>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">👥</div>
+                            <h3>Aktywna społeczność</h3>
+                            <p>Ponad 600 członków serwera discord</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🛡️</div>
+                            <h3>Profesjonalne służby</h3>
+                            <p>LSPD, EMS i inne służby publiczne</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🚗</div>
+                            <h3>Realistyczny gameplay</h3>
+                            <p>Ekonomia, praca, organizacje przestępcze</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">🏢</div>
+                            <h3>Własne firmy</h3>
+                            <p>Załóż swoją firmę i rozwijaj biznes</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- CTA Section -->
+            <section class="cta">
+                <div class="container">
+                    <h2>Gotowy na przygodę?</h2>
+                    <p>Dołącz do nas już dziś i zacznij swoją historię w Los Santos</p>
+                    <div class="cta-buttons">
+                        <button class="btn btn-primary" onclick="showPage('applications')">
+                            Złóż podanie
+                        </button>
+                        <button class="btn btn-outline" onclick="showPage('rules')">
+                            Przeczytaj regulamin
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Rules Page -->
+        <div id="rules" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Regulamin Serwera</h1>
+                    <p>Zapoznaj się z zasadami obowiązującymi na naszym serwerze</p>
+                </div>
+
+                <div class="info-card">
+                    <h3>⚠️ Ważne informacje</h3>
+                    <p>Poniższy regulamin obowiązuje wszystkich graczy na serwerze DoseRP.</p>
+                    <p class="text-muted">Wersja regulaminu: 1.0 | Data ostatniej aktualizacji: 25.07.2025</p>
+                </div>
+
+                <div class="rules-sections">
+                    <div class="rule-section">
+                        <h3>§1 Postanowienia ogólne</h3>
+                        <ol>
+                            <li>Administracja zastrzega sobie prawo do zbanowania użytkownika bez podania konkretnego powodu.</li>
+                            <li>Zarząd Serwera zastrzega sobie prawo do wprowadzania zmian w Regulaminie w każdym momencie.</li>
+                            <li>Każdy gracz jest zobowiązany do przestrzegania zasad roleplay oraz realistycznego odgrywania swojej postaci.</li>
+                            <li>Zakazane jest rozpoczynanie akcji agresywnych 5 minut przed i po restarcie serwera.</li>
+                            <li>Na serwerze zakazana jest tzw. BojówkaRP, a wszelkie przejawy takiej rozgrywki będą odpowiednio karane.</li>
+                            <li>Zakazuje się wychodzenia z gry podczas trwania akcji roleplay.W przypadku utraty połączenia z serwerem (crasha) podczas trwającej akcji, gracz ma obowiązek niezwłocznie zgłosić ten fakt na odpowiednim kanale Discord.</li>
+                            <li>Na serwerze obowiązuje bezwzględny zakaz jednoczesnego przebywania na serwerze i korzystania z zewnętrznych komunikatorów głosowych lub oglądania transmisji prowadzonych przez osoby znajdujące się w tym samym czasie na serwerze.</li>
+                            <li>Przesadne wyzwiska, obrażanie, poniżanie lub prowokowanie innych graczy są surowo zabronione. Takie zachowania będą traktowane jako naruszenie zasad kultury i mogą skutkować karami.</li>
+                            <li>Łamanie zasad w odpowiedzi na naruszenia popełnione przez innych graczy jest zabronione i będzie traktowane jako naruszenie regulaminu.</li>
+                            <li>Zgłoszenia dotyczące naruszeń regulaminu przez innych graczy przedawniają się po upływie 48 godzin od momentu zdarzenia.</li>
+                        </ol>
+                    </div>
+
+                    <div class="rule-section">
+                        <h3>§2 Rozgrywka na Serwerze</h3>
+                        <ol>
+                            <li>Rozgrywka na serwerze toczy się w fikcyjnym mieście Los Santos, położonym w stanie San Andreas. Miasto to jest wzorowane na Los Angeles w Kalifornii (USA).</li>
+                            <li>Zakazuje się powrotu do akcji po BW.</li>
+                            <li>Wykorzystywanie błędów technicznych lub mechanicznych serwera jest surowo zabronione.</li>
+                            <li>Zakazuje się dołączenia do akcji agresywnej między dwoma grupami (wjazd na trzeciego).</li>
+                            <li>Na serwerze surowo zakazane jest przenoszenie informacji zdobytych poza grą do świata IC.</li>
+                            <li>Gracze mogą zostać przeszukani wyłącznie przez osoby, które doprowadziły ich do stanu BW. Przeszukiwanie przez osoby trzecie, które nie brały udziału w akcji będzie traktowane jako LootRP.</li>
+                            <li>Przeszukiwać mogą także osoby, które należą do tej samej grupy co sprawca i aktywnie uczestniczyły w danej akcji.</li>
+                            <li>Zabrania się zabierania wszystkich przedmiotów z ekwipunku innego gracza, takie działanie jest klasyfikowane jako LootRP.</li>
+                            <li>Przeszukanie musi zostać odegrane w sposób niewerbalny, nie jest wymagane odgrywanie przeszukania na komendach narracyjnych.</li>
+                            <li>Zakazuje się przeszukiwania osób podczas aktywnej strzelaniny. Wyjątkiem jest zabranie amunicji, gdy nam jej zabraknie.</li>
+                            <li>Podczas wykonywania pracy należy poruszać się pojazdem służbowym do tego przeznaczonym. Poruszanie się pojazdem prywatnym może zostać odpowiednio ukarane.</li>
+                            <li>Surowo zakazuje się odgrywania gwałtów, napaści na tle seksualnym itp.</li>
+                            <li>Rany stałe można odegrać bez pozwolenia drugiej osoby, ale tylko w przypadku dobrej podstawy roleplay.</li>
+                            <li>Na serwerze obowiązuje system inicjacji werbalnej, bez niej rozpoczęcie strzelaniny będzie uznawane jako RDM.</li>
+                            <li>Podczas inicjacji czas na reakcje wynosi 5 sekund.</li>
+                            <li>Zabrania się rozpoczęcia inicjacji będąc w aucie.</li>
+                            <li>Na serwerze istnieją tzw. Greenzone czyli miejsca, w których gracz nie może rozpocząć akcji agresywnej.Greenzone:·Stacje policji/szeryfów<br>·Szpitale<br>·Departament Sprawiedliwości<br>·Mechanik<br>·Odholownik<br>·Więzienie Stanowe<br>·Apartamenty<br></li>
+                            <li>Wyjątkiem od zasady jest sytuacja, gdy akcja jest kontynuacją.</li>
+                            <li>Zakazuje się Fail Drivingu, czyli nierealistycznego poruszania się pojazdem (Np. Bez >2 opon).</li>
+                            <li>Zabrania się celowego bugowania animacji w celu zdobycia przewagi nad przeciwnikiem.</li>
+                            <li>Zabrania się używania shaderów oraz citizenów, które w jakikolwiek sposób zapewniają przewagę w rozgrywce nad innymi graczami (np. usunięcie krzaków).</li>
+                        </ol>
+                    </div>
+
+                    <div class="rule-section">
+                        <h3>§3 Odgrywanie Postaci</h3>
+                        <ol>
+                            <li>Każdy gracz ma obowiązek szanować życie swojej postaci.</li>
+                            <li>Zakazuje się rozpoznawania osoby, która nosi maskę i próbuje zmieniać głos.</li>
+                            <li>Gracz jest zobowiązany do odgrywania obrażeń w sposób zgodny z sytuacją.</li>
+                            <li>Zakazuje się podawania wszelkiego rodzaju informacji podczas stanu BW postaci.</li>
+                            <li>Zakazuje się posiadania tzw. Celebrity Name, czyli danych znanych postaci (np. Donald Tusk)</li>
+                            <li>Aby uśmiercić swoją lub kogoś postać, należy posiadać solidny powód IC oraz złożyć odpowiedni wniosek na discordzie DoseRP.</li>
+                            <li>Gracz zobowiązany jest do konsekwentnego odgrywania swojej postaci (np. były policjant nie może zacząć grać Crime).</li>
+                            <li>Wyjątkiem od tej zasady jest zgoda administracji.</li>
+                            <li>Istnieje możliwość odgrywania skorumpowanej postaci tylko za zgodą administracji.</li>
+                            <li>Każda postać musi posiadać swoje indywidualne cechy charakteru oraz historię postaci.</li>
+                            <li>Zakazuje się odgrywania postaci płci przeciwnej IRL.</li>
+                            <li>Zakazuje się przekazywania przedmiotów z jednej postaci na drugą.</li>
+                        </ol>
+                    </div>
+
+                    <div class="rule-section">
+                        <h3>§4</h3>
+                        <ol>
+                            <li></li>
+                        </ol>
+                    </div>
+
+                    <div class="rule-section">
+                        <h3>§5</h3>
+                        <ol>
+                            <li></li>
+                        </ol>
+                    </div>
+
+                    <div class="rule-section">
+                        <h3>§6</h3>
+                        <ol>
+                            <li></li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="penalties-card">
+                    <h3>Konsekwencje łamania regulaminu</h3>
+                    <div class="penalties-grid">
+                        <div class="penalty-item">
+                            <h4>Ostrzeżenie</h4>
+                            <p>Za drobne naruszenia regulaminu</p>
+                        </div>
+                        <div class="penalty-item">
+                            <h4>Kick/Ban czasowy</h4>
+                            <p>Za poważniejsze naruszenia</p>
+                        </div>
+                        <div class="penalty-item">
+                            <h4>Ban permanentny</h4>
+                            <p>Za ciężkie naruszenia i recydywę</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Changelog Page -->
+        <div id="changelog" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Historia Zmian</h1>
+                    <p>Zobacz co nowego na serwerze</p>
+                </div>
+
+                 <!-- <div class="changelog-list"> 
+                    <div class="changelog-item">
+                        <div class="changelog-header">
+                            <div>
+                                <h3>Serwer w trakcie tworzenia</h3>
+                                <p class="changelog-date">📅 15.01.2024</p>
+                            </div>
+                            <span class="badge badge-update">Aktualizacja</span>
+                        </div>
+                        <div class="changelog-changes">
+                            <div class="change-item add">
+                                <span class="change-icon">+</span>
+                                <span>Dodano nowy system pracy dla mechaników</span>
+                            </div>
+                            <div class="change-item add">
+                                <span class="change-icon">+</span>
+                                <span>Wprowadzono nowe pojazdy do LSPD</span>
+                            </div>
+                            <div class="change-item fix">
+                                <span class="change-icon">🐛</span>
+                                <span>Naprawiono błąd z respawnem pojazdów</span>
+                            </div>
+                            <div class="change-item fix">
+                                <span class="change-icon">🐛</span>
+                                <span>Poprawiono system ekonomiczny</span>
+                            </div>
+                            <div class="change-item change">
+                                <span class="change-icon">⚙️</span>
+                                <span>Zmieniono wynagrodzenia za niektóre prace</span>
+                            </div>
+                        </div>
+                    </div> 
+
+                    <div class="changelog-item">
+                        <div class="changelog-header">
+                            <div>
+                                <h3>v3.2.0</h3>
+                                <p class="changelog-date">📅 08.01.2024</p>
+                            </div>
+                            <span class="badge badge-major">Duża aktualizacja</span>
+                        </div>
+                        <div class="changelog-changes">
+                            <div class="change-item add">
+                                <span class="change-icon">+</span>
+                                <span>Całkowicie nowy system gangów</span>
+                            </div>
+                            <div class="change-item add">
+                                <span class="change-icon">+</span>
+                                <span>Dodano system terytoriów</span>
+                            </div>
+                            <div class="change-item add">
+                                <span class="change-icon">+</span>
+                                <span>Wprowadzono nowe bronie</span>
+                            </div>
+                            <div class="change-item change">
+                                <span class="change-icon">⚙️</span>
+                                <span>Przeprojektowano system policji</span>
+                            </div>
+                            <div class="change-item remove">
+                                <span class="change-icon">🗑️</span>
+                                <span>Usunięto stary system walki</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="changelog-item">
+                        <div class="changelog-header">
+                            <div>
+                                <h3>v3.1.5</h3>
+                                <p class="changelog-date">📅 28.12.2023</p>
+                            </div>
+                            <span class="badge badge-hotfix">Hotfix</span>
+                        </div>
+                        <div class="changelog-changes">
+                            <div class="change-item fix">
+                                <span class="change-icon">🐛</span>
+                                <span>Naprawiono krytyczny błąd z zapisywaniem postaci</span>
+                            </div>
+                            <div class="change-item fix">
+                                <span class="change-icon">🐛</span>
+                                <span>Poprawiono problemy z synchronizacją</span>
+                            </div>
+                            <div class="change-item fix">
+                                <span class="change-icon">🐛</span>
+                                <span>Naprawiono błąd z inwentarzem</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+
+                <div class="info-card">
+                    <h3>📢 Informacja</h3>
+                    <p>Aktualizacje są wprowadzane regularnie. Śledź nasz Discord, aby być na bieżąco z najnowszymi zmianami!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Applications Page -->
+        <div id="applications" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Podania</h1>
+                    <p>Wybierz rodzaj podania, które chcesz złożyć</p>
+                </div>
+
+                <div class="applications-grid">
+                    <div class="application-card">
+                        <div class="app-icon">🚑</div>
+                        <h3>EMS</h3>
+                        <p>Zostań ratownikiem medycznym i pomagaj obywatelom Los Santos</p>
+                        <button class="btn btn-primary" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSd77iic7iz8N52xBiVyQYve-T0MVlnDpb-hg4el2400RopSuw/viewform?usp=dialog', '_blank')">
+                            Złóż podanie
+                        </button>
+                    </div>
+
+                    <div class="application-card">
+                        <div class="app-icon">👮</div>
+                        <h3>LSPD</h3>
+                        <p>Dołącz do policji i dbaj o bezpieczeństwo w mieście</p>
+                        <button class="btn btn-primary" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSe4f3OafQrum6IIJtp97eWIOfu-oAypbktA96d38_5HpU_tFg/viewform?usp=dialog', '_blank')">
+                            Złóż podanie
+                        </button>
+                    </div>
+
+                    <div class="application-card">
+                        <div class="app-icon">🔧</div>
+                        <h3>Mechanik</h3>
+                        <p>Naprawiaj pojazdy i prowadź własny warsztat</p>
+                        <button class="btn btn-primary" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSeSJ9hSzdXW160vxI7kjEDgz39W6roWY__b2pY8VR1AG1opHA/viewform?usp=dialog', '_blank')">
+                            Złóż podanie
+                        </button>
+                    </div>
+
+                    <div class="application-card">
+                        <div class="app-icon">🏛️</div>
+                        <h3>Organizacja przestępcza</h3>
+                        <p>Stwórz lub dołącz do organizacji przestępczej</p>
+                        <button class="btn btn-primary" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSfw6llx971ld5MQZgj2LriUUMNc5IyXO6qSvJ6LaS3pf18i1g/viewform?usp=dialog', '_blank')">
+                            Złóż podanie
+                        </button>
+                    </div>
+
+                    <div class="application-card">
+                        <div class="app-icon">💀</div>
+                        <h3>Gang</h3>
+                        <p>Załóż swój gang uliczny i walcz o terytorium</p>
+                        <button class="btn btn-primary" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdPTkoRxUQJ1NvnqNcLt7ahlAxAREOgTmPFotInk7To0dnS9A/viewform?usp=dialog', '_blank')">
+                            Złóż podanie
+                        </button>
+                    </div>
+
+                    <div class="application-card">
+                        <div class="app-icon">🏢</div>
+                        <h3>Firma</h3>
+                        <p>Rozpocznij własną działalność gospodarczą</p>
+                        <button class="btn btn-primary" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSc_bCeQMxmdTqp5MRaYR8Bvj0koX4NL5BevUGmC4mkwQFjdww/viewform?usp=dialog', '_blank')">
+                            Złóż podanie
+                        </button>
+                    </div>
+
+                    <div class="application-card">
+                        <div class="app-icon">⚙️</div>
+                        <h3>Administrator</h3>
+                        <p>Pomóż w zarządzaniu serwerem jako administrator</p>
+                        <button class="btn btn-primary" onclick="window.open('https://docs.google.com/forms/d/e/1FAIpQLSdPIY5tktT0G7JrIDExZ8Yk3WK_IRgsyFj-tpVQUvldvus94g/viewform?usp=dialog', '_blank')">
+                            Złóż podanie
+                        </button>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <h3>📋 Ważne informacje</h3>
+                    <p>Przed złożeniem podania upewnij się, że spełniasz wszystkie wymagania wymienione w regulaminie. Wszystkie podania są rozpatrywane przez administrację w kolejności wpływu.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Application Status Page -->
+        <div id="status" class="page">
+            <div class="container">
+                <div class="page-header">
+                    <h1>Sprawdź Status Podania</h1>
+                    <p>Dowiedz się jak sprawdzić status swojego podania</p>
+                </div>
+
+                <div class="status-methods">
+                    <div class="status-card">
+                        <div class="status-icon">💬</div>
+                        <h3>Discord</h3>
+                        <p>Najszybszy sposób sprawdzenia statusu podania</p>
+                        <ul>
+                            <li>Wejdź na nasz serwer Discord</li>
+                            <li>Przejdź do kanału #status-podań</li>
+                            
+                        </ul>
+                        <button class="btn btn-primary" onclick="window.open('https://discord.gg/fivemrp', '_blank')">
+                            Otwórz Discord
+                        </button>
+                    </div>
+
+
+                    <div class="status-card">
+                        <div class="status-icon">✉️</div>
+                        <h3>Kontakt bezpośredni</h3>
+                        <p>Skontaktuj się bezpośrednio z administracją</p>
+                        <ul>
+                            <li>E-mail: doserp253@gmail.com</li>
+                            <li>Discord: Ticket</li>
+                            <li>Forum: sekcja "Podania"</li>
+                        </ul>
+                        <button class="btn btn-outline" onclick="window.open('mailto:doserp253@gmail.com', '_blank')">
+                            Wyślij e-mail
+                        </button>
+                    </div>
+                </div>
+
+                <div class="status-timeline">
+                    <h3>Typowy czas rozpatrzenia podań</h3>
+                    <div class="timeline-grid">
+                        <div class="timeline-item">
+                            <span class="timeline-badge">1-3 dni</span>
+                            <div>
+                                <h4>EMS, LSPD, Mechanik</h4>
+                                <p>Podania do służb publicznych</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-badge">1-5dni</span>
+                            <div>
+                                <h4>Firmy, Organizacje</h4>
+                                <p>Podania biznesowe i przestępcze</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <span class="timeline-badge">1-7dni + (dodatkowa rozmowa rekrutacyjna)</span>
+                            <div>
+                                <h4>Administrator</h4>
+                                <p>Podania administracyjne</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>DoseRP</h4>
+                    <p>Najlepszy serwer roleplay w Polsce</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Szybkie linki</h4>
+                    <a href="#" onclick="showPage('rules')">Regulamin</a>
+                    <a href="#" onclick="showPage('applications')">Podania</a>
+                    <a href="#" onclick="showPage('changelog')">Changelog</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Społeczność</h4>
+                    <a href="https://discord.gg/doserp" target="_blank">Discord</a>
+                    <a href="strona" target="_blank">Strona serwera</a>
+                    <a href="https://www.tiktok.com/@doseroleplay" target="_blank">Tiktok</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Kontakt</h4>
+                    <a href="mailto:doserp253@gmail.com">doserp253@gmail.com</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DoseRP. Wszystkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
